@@ -1,0 +1,61 @@
+/**
+ * Superthe.me
+ * ------------------------------------------------------------------------
+ */
+
+// Mixins
+@import 'mixins.less';
+
+// Google Web Fonts
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+
+// Default
+@font-family: 'Open Sans', sans-serif;
+@font-size: 12;
+@font-weight: 400;
+@font-color: #444;
+@nav-line-height: 100px;
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+	color: @font-color;
+	font-family: @font-family;
+	.font-size(@font-size);
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: 400;
+}
+
+// Navbar reset
+@import 'navbar/default.less';
+
+// Theme
+@import 'theme/default.less';
+
+// Small screens and horizontal tablets
+@media (min-width: 768px) and (max-width: 979px)
+{
+	@import 'navbar/laptop.less';
+	@import 'theme/laptop.less';
+}
+
+// Vertical tablets
+@media (max-width: 767px)
+{
+	@import 'navbar/tablet.less';
+	@import 'theme/tablet.less';
+}
+
+// Mobile phones and smaller
+@media (max-width: 480px)
+{
+	@import 'navbar/phone.less';
+	@import 'theme/phone.less';
+}

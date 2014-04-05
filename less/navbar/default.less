@@ -1,0 +1,121 @@
+
+#header
+{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: @nav-line-height;
+	position: fixed;
+	z-index: 1;
+}
+
+.navbar
+{
+	margin-bottom: 0;
+	
+	.nav
+	{
+		color: @font-color;
+
+		a
+		{
+			.font-size(@font-size);
+			font-weight: @font-weight;
+		}
+		
+		& > .active
+		{
+			& > a, & > a:hover, & > a:focus
+			{
+				.box-shadow(none);
+				background: none;
+				color: @font-color;
+			}
+		}
+
+		li
+		{
+			line-height: 0;
+
+			a:hover
+			{
+				background: none;
+				color: @font-color;
+			}
+		}
+
+		&  > li > a
+		{
+			.text-shadow(none);
+			margin: 0;
+			padding: 0 20px;
+			line-height: @nav-line-height;
+			color: @font-color;
+		}
+
+		&  > li > a > i
+		{
+			color: @font-color;
+		}
+
+	}
+}
+
+.navbar-inner
+{
+	padding-left: 0;
+	padding-right: 0;
+	border: none;
+	.box-shadow(none);
+	background: none;
+
+
+	.brand
+	{
+		display: inline-block;
+		float: left;
+		display: block;
+		margin: 0 20px 0 0;
+		padding: 0;
+		.font-size(@font-size);
+		line-height: @nav-line-height;
+		font-weight: @font-weight;
+		color: @font-color;
+		.text-shadow(none);
+	}
+}
+
+.navbar-fixed-top
+{
+	.navbar-inner
+	{
+		.box-shadow(none);
+	}
+}
+
+.navbar-static-top
+{
+	.navbar-inner
+	{
+		.box-shadow(none);
+	}
+}
+
+.nav-collapse
+{
+	.nav > li > a,
+	{
+		font-weight: @font-weight;
+		.rounded-corners(0);
+	}
+
+	.dropdown-menu a
+	{
+		font-weight: @font-weight;
+		.rounded-corners(0);
+	}
+}
+
+.navbar .btn, .navbar .btn-group {
+	margin-top: 16px;
+}
